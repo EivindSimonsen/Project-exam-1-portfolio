@@ -1,0 +1,72 @@
+/*Logo introduction*/
+
+.blogIntro h1 {
+  font-size: 3em;
+  margin-bottom: 0px;
+}
+
+.blogIntro h2,
+.upcomingEvents {
+  color: var(--main-blue);
+  font-size: 1.7em;
+  margin-top: 0px;
+}
+
+.sliderIcons {
+  text-align: center;
+}
+
+/*Latest blogs section, with slider*/
+
+h2 {
+  white-space: nowrap;
+}
+
+.postBoxContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.postBox img {
+  width: 240px;
+  height: 240px;
+}
+
+.postBox p {
+  max-height: 97px;
+  overflow: hidden;
+  white-space: pre-wrap;
+  text-align: left;
+  margin-bottom: 35px;
+}
+
+.postBox {
+  max-width: 250px;
+  margin: 50px 0px;
+  text-align: center;
+}
+
+.sliderIcons {
+  display: none;
+  margin-bottom: 20px;
+}
+
+.sliderIcons i {
+  padding: 15px;
+  font-size: 1.3em;
+  color: var(--main-blue);
+  cursor: pointer;
+}
+
+/*Upcoming events section*/
+
+.upcomingEvents {
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.upcomingEvents img {
+  max-width: 300px;
+  border: 1px solid var(--main-blue);
+}

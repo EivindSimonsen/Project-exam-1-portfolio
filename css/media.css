@@ -1,0 +1,131 @@
+@media (min-width: 450px) {
+  .aboutFlex {
+    display: flex;
+  }
+}
+
+@media (min-width: 874px) {
+  nav {
+    display: block;
+    position: static;
+    background: none;
+  }
+
+  .fixed {
+    position: static;
+  }
+
+  main {
+    margin-top: 0px;
+  }
+
+  header label {
+    display: none;
+  }
+
+  header li,
+  li a {
+    display: inline-block;
+    margin-left: 60px;
+    padding: 0px;
+  }
+
+  .blogIntro h1 {
+    font-size: 6em;
+  }
+
+  .upcomingEvents img {
+    max-width: 750px;
+  }
+
+  .postBox {
+    display: flex;
+    max-width: 500px;
+    position: relative;
+    margin: 50px;
+  }
+
+  .postBox img {
+    width: 250px;
+    height: 250px;
+  }
+
+  .postBox p {
+    margin-bottom: 0px;
+  }
+
+  .cta-placement {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+  }
+
+  .seperate {
+    margin-left: 20px;
+  }
+
+  .flex {
+    display: flex;
+    max-width: 800px;
+  }
+
+  .resize img {
+    width: 300px;
+    height: 300px;
+  }
+
+  .aboutFlex img {
+    height: 300px;
+    width: 300px;
+  }
+
+  #modal-image img {
+    width: 300px;
+    height: 300px;
+  }
+
+  .indHeader {
+    margin-bottom: 20px;
+  }
+
+  footer {
+    margin-top: 100px;
+  }
+}
+
+@media (min-width: 962px) {
+  nav a {
+    margin-right: 60px;
+  }
+
+  #modal-image img {
+    width: 350px;
+    height: 350px;
+  }
+}
+
+@media (min-width: 1208px) {
+  .upcomingEvents img {
+    max-width: 1000px;
+  }
+
+  .postBoxContainer {
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow: hidden;
+    height: 340px;
+    width: 1200px;
+    margin: 0px auto;
+  }
+
+  .sliderIcons {
+    display: block;
+  }
+}
+
+@media (min-width: 1347px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

@@ -1,0 +1,7 @@
+:root {
+  --header-footer-links: #ffffff;
+  --main-blue: #023e73;
+  --secondary-blue: #0367a6;
+  --loading-successful: lightgreen;
+  --loading-error: orangeRed;
+}

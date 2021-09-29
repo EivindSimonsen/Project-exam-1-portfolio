@@ -1,0 +1,17 @@
+.aboutFlex {
+  max-width: 1000px;
+  margin: 40px auto;
+}
+
+.aboutFlex > div {
+  padding: 20px;
+}
+
+.aboutFlex img {
+  height: 200px;
+  width: 200px;
+}
+
+h3 {
+  color: var(--main-blue);
+}

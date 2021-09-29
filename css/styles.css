@@ -1,0 +1,147 @@
+@import "imports/variables.css";
+
+/*Global*/
+
+a,
+header,
+footer {
+  color: var(--header-footer-links);
+  text-decoration: none;
+}
+
+.logo a {
+  font-size: 2.3em;
+  text-transform: uppercase;
+  max-width: 200px;
+  padding: 20px;
+}
+
+h1,
+.logo a {
+  font-family: "Cormorant Garamond", Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1,
+h2 {
+  text-align: center;
+  color: var(--main-blue);
+}
+
+.indHeader {
+  font-size: 2.5em;
+  margin-top: 70px;
+  margin-bottom: 0px;
+  font-family: "Roboto", Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.fixed {
+  position: fixed;
+  z-index: 1000;
+  width: -webkit-fill-available;
+}
+
+main {
+  margin-top: 100px;
+}
+
+header,
+footer {
+  background: linear-gradient(97deg, rgba(3, 103, 166, 1) 0%, rgba(49, 30, 89, 1) 100%);
+  display: flex;
+  padding: 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+body {
+  font-family: "Roboto", Verdana, Geneva, Tahoma, sans-serif;
+  margin: 0px auto;
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+.cta {
+  background-color: var(--main-blue);
+  border-radius: 30px;
+  padding: 15px 30px;
+  margin-top: 200px;
+}
+
+.cta:hover {
+  background-color: var(--secondary-blue);
+}
+
+hr {
+  max-width: 1100px;
+  border: 3px solid var(--main-blue);
+}
+
+.current {
+  text-decoration: underline;
+}
+
+.loading {
+  padding: 20px;
+  background-color: var(--loading-successful);
+  border-radius: 20px;
+  width: 300px;
+  text-align: center;
+}
+
+.error {
+  padding: 20px;
+  background-color: var(--loading-error);
+  border-radius: 20px;
+  max-width: 500px;
+  text-align: center;
+  color: var(--header-footer-links);
+}
+
+/*Navigation*/
+
+header li,
+li a {
+  display: block;
+  font-size: 1.2em;
+  padding: 15px;
+}
+
+nav {
+  display: none;
+  position: fixed;
+  top: 85px;
+  background: rgb(3, 103, 166);
+  background: linear-gradient(97deg, rgba(3, 103, 166, 1) 0%, rgba(49, 30, 89, 1) 100%);
+  z-index: 1000;
+  right: 0px;
+}
+
+#hamburger {
+  display: none;
+}
+
+#hamburger:checked ~ nav {
+  display: block;
+}
+
+nav a {
+  text-decoration: none;
+  margin-right: 30px;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.fa-bars {
+  font-size: 1.5em;
+}
+
+/*Footer*/
+
+footer {
+  justify-content: center;
+  padding: 25px;
+  margin-top: 50px;
+}
