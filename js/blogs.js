@@ -13,7 +13,7 @@ async function getProducts(url) {
         blogsContainer.innerHTML = "";
 
         for (let i = 0; i < blog.length; i++) {
-
+            
             blogsContainer.innerHTML +=
             `
             <div class="postBox">
@@ -58,7 +58,7 @@ const viewLess = document.querySelector("#view-less");
 
 viewLess.style.display = "none"
 
-viewMore.onclick = function() {
+viewMore.onclick = function(event) {
     viewMore.style.display = "none";
     viewLess.style.display = "inline";
     const newUrl = baseUrl + "&per_page=20";
@@ -66,7 +66,7 @@ viewMore.onclick = function() {
     getProducts(newUrl);
 }
 
-viewLess.onclick = function() {
+viewLess.onclick = function(event) {
     viewMore.style.display = "inline";
     viewLess.style.display = "none";
     const newUrl = baseUrl + "&per_page=6";
