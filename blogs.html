@@ -33,13 +33,18 @@
   <body>
     <main>
       <h1 class="indHeader">Blogs</h1>
+      <div class="search" name="search">
+        <input type="search" name="search" id="search-input" />
+        <button class="search-button cta">Search</button>
+      </div>
       <section class="grid">
         <div class="loadingCenter">
           <div class="loading">Loading...</div>
         </div>
       </section>
       <div class="cta-placement-blogs">
-        <button class="cta">View more</button>
+        <button class="cta" id="view-more">View more</button>
+        <button class="cta" id="view-less">View less</button>
       </div>
       <script src="js/components/displayError.js"></script>
       <script src="js/blogs.js" type="module"></script>

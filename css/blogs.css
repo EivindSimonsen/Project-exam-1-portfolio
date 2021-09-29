@@ -32,6 +32,21 @@ button {
   margin-top: 0px;
 }
 
+.search {
+  text-align: center;
+}
+
+.search button {
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.search input {
+  padding: 10px 40px;
+  border: 1px solid var(--main-blue);
+  border-radius: 5px;
+}
+
 /*I only wanted this media call to happen on this page, which is why it is included in this stylesheet, and not media.css*/
 @media (min-width: 874px) {
   .cta-placement {

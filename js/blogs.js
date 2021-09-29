@@ -1,8 +1,8 @@
-const url = "https://www.simsandkrylblogs.online/wp-json/wp/v2/posts?_embed&per_page=100";
+const baseUrl = "https://www.simsandkrylblogs.online/wp-json/wp/v2/posts?_embed&per_page=6";
 
 const blogsContainer = document.querySelector(".grid");
 
-async function getProducts() {
+async function getProducts(url) {
     try {
         const response = await fetch(url);
         const getResults = await response.json();
@@ -13,10 +13,6 @@ async function getProducts() {
         blogsContainer.innerHTML = "";
 
         for (let i = 0; i < blog.length; i++) {
-
-            if (i === 8) {
-                break;
-            } 
 
             blogsContainer.innerHTML +=
             `
@@ -40,52 +36,41 @@ async function getProducts() {
     }
 }
 
-getProducts();
+getProducts(baseUrl);
 
-// I could't find another way to solve the issue of showing more blogs. This code made it work, but i don't think it is the right way.
+/*Search*/
 
-const viewMore = document.querySelector(".cta-placement-blogs");
-const button = document.querySelector(".cta");
-viewMore.addEventListener("click", morePosts)
+const searchBtn = document.querySelector(".search-button");
 
-async function morePosts() {
+searchBtn.onclick = function() {
+    const searchInput = document.querySelector("#search-input").value;
+    const newUrl = baseUrl + `&search=${searchInput}`;
+    blogsContainer.innerHTML = "";
+    getProducts(newUrl);
 
-    button.style.display = "none"
+    console.log(searchInput);
+}
 
-    try {
-        const response = await fetch(url);
-        const getResults = await response.json();
-        console.log(getResults);
+/*View more*/
 
-        const blog = getResults;
+const viewMore = document.querySelector("#view-more");
+const viewLess = document.querySelector("#view-less");
 
-        blogsContainer.innerHTML = "";
+viewLess.style.display = "none"
 
-        for (let i = 0; i < blog.length; i++) {
+viewMore.onclick = function() {
+    viewMore.style.display = "none";
+    viewLess.style.display = "inline";
+    const newUrl = baseUrl + "&per_page=20";
+    blogsContainer.innerHTML = "";
+    getProducts(newUrl);
+}
 
-            if (i === 20) {
-                break;
-            } 
-
-            blogsContainer.innerHTML +=
-            `
-            <div class="postBox">
-                <div>
-                    <img src="${blog[i]._embedded['wp:featuredmedia']['0'].source_url}" alt="${blog[i]._embedded['wp:featuredmedia']['0'].alt_text}" />
-                </div>
-                <div class="seperate">
-                    <h2>${blog[i].title.rendered}</h2>
-                    <p>${blog[i].excerpt.rendered}</p>
-                    <a href="blogspecific.html?id=${blog[i].id}" class="cta cta-placement">Read more</a>
-                </div>
-            </div>
-            `
-        }
-    }
-
-    catch (error) {
-        console.log(error);
-        blogsContainer.innerHTML = displayError("Blog posts failed to load from server, try again later!")
-    }
+viewLess.onclick = function() {
+    viewMore.style.display = "inline";
+    viewLess.style.display = "none";
+    const newUrl = baseUrl + "&per_page=6";
+    blogsContainer.innerHTML = "";
+    getProducts(newUrl);
 }
 
